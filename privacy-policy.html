@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>X-GEN AI · 개인정보 처리 안내</title>
+    <style>
+      :root { color: #172b46; background: #f5f8fc; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; }
+      body { margin: 0; }
+      main { width: min(760px, calc(100% - 36px)); margin: 32px auto; padding: 30px 34px; border: 1px solid #dce6f0; border-radius: 16px; background: #fff; box-shadow: 0 14px 36px rgba(35, 65, 100, .09); }
+      .brand { display: flex; align-items: center; gap: 12px; padding-bottom: 18px; border-bottom: 1px solid #e5edf5; }
+      .brand img { width: 42px; height: 42px; }
+      .brand strong, .brand span { display: block; }
+      .brand strong { color: #2367c5; font-size: 17px; }
+      .brand span { margin-top: 3px; color: #70829a; font-size: 12px; }
+      h1 { margin: 28px 0 8px; color: #142945; font-size: 26px; }
+      .updated { margin: 0 0 24px; color: #70829a; font-size: 12px; }
+      h2 { margin: 26px 0 8px; color: #23466b; font-size: 16px; }
+      p, li { color: #526a83; font-size: 13px; line-height: 1.75; }
+      ul { padding-left: 20px; }
+      .notice { padding: 13px 15px; border: 1px solid #c9def3; border-radius: 10px; color: #315b83; background: #f1f7fd; font-size: 13px; line-height: 1.65; }
+      code { padding: 2px 4px; border-radius: 4px; color: #234c7a; background: #eef4fa; font-size: 12px; }
+      footer { display: grid; gap: 3px; margin-top: 30px; padding-top: 16px; border-top: 1px solid #e5edf5; color: #8091a5; font-size: 11px; line-height: 1.6; }
+      footer a { color: #2367c5; font-weight: 800; text-decoration: none; }
+      footer a:hover { text-decoration: underline; text-underline-offset: 2px; }
+      footer .copyright { color: #8091a5; font-size: 10px; letter-spacing: .01em; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="brand"><img src="logo.svg" alt="" aria-hidden="true" /><div><strong>X-GEN AI</strong><span>생성형 AI 정보보호</span></div></div>
+      <h1>개인정보 처리 안내</h1>
+      <p class="updated">시행일: 2026년 9월 1일 · 문서 버전: 1</p>
+      <div class="notice">X-GEN AI 확장 프로그램은 생성형 AI 서비스로 정보가 전송되기 전에 조직의 보안 정책을 적용하기 위한 브라우저 보호 도구입니다. 아래 내용은 확장 프로그램과 인증된 X-GEN AI 게이트웨이가 처리하는 정보와 목적을 설명합니다.</div>
+
+      <h2>1. 처리하는 정보</h2>
+      <ul>
+        <li><strong>계정 정보:</strong> 회사 이메일, 게이트웨이가 반환하는 이름·부서, 장치 식별자와 인증 토큰. 이메일 저장을 선택한 경우 이메일은 브라우저에 별도로 저장됩니다.</li>
+        <li><strong>보안 검사 정보:</strong> 전송하려는 프롬프트와 첨부파일, 서비스 호스트·경로, 서비스 계정 식별자, 필요한 요청 헤더와 브라우저 정보.</li>
+        <li><strong>응답·인쇄 정보:</strong> 보호 대상 AI 서비스의 응답 DOM에서 추출한 응답 내용과 사용자가 인쇄를 실행한 경우의 화면 캡처 및 인쇄 이력.</li>
+        <li><strong>정책·이력 정보:</strong> 정책 결정, 탐지 유형, 차단 사유, 시간, 서비스 코드 등의 최소 메타데이터. 확장 프로그램의 로컬 기록에는 원문 대신 유형과 상태만 저장합니다.</li>
+        <li><strong>장애 진단 정보:</strong> 사용자가 설정에서 장애 상세 수집을 켠 경우에만 오류 시점의 원문 프롬프트·응답 문맥, 페이지 정보, 오류 팝업 화면 캡처와 관련 로그를 전송합니다.</li>
+      </ul>
+
+      <h2>2. 처리 목적</h2>
+      <ul>
+        <li>생성형 AI 서비스로 프롬프트·첨부파일이 전송되기 전 개인정보, 금칙어, 기밀정보 및 조직 정책을 검사합니다.</li>
+        <li>허용·차단 결과와 탐지 사유를 조직의 보안 감사 및 LogVault 이력 처리에 제공합니다.</li>
+        <li>이력으로 관리되는 데이터는 암호화되어 저장되며, 개인정보의 경우 마스킹 처리되어 관리됩니다.</li>
+        <li>응답 데이터와 인쇄 이력을 조직의 후속 통제 및 감사 목적에 사용합니다.</li>
+        <li>사용자가 선택적으로 켠 장애 상세 수집을 통해 보호 오류를 분석하고 서비스 품질을 개선합니다.</li>
+      </ul>
+
+      <h2>3. 전송 및 제3자 제공</h2>
+      <p>확장 프로그램은 보호 대상 생성형 AI 서비스와 직접 정책 서버 통신을 하지 않고, 인증된 조직 게이트웨이에 검사 요청을 전송합니다. 게이트웨이는 조직 설정에 따라 PII·OCR·유사도 분석 및 LogVault 인입 처리를 수행할 수 있습니다. X-GEN AI는 광고, 사용자 프로파일링, 데이터 판매를 목적으로 정보를 사용하지 않습니다. AI 서비스로의 실제 전송은 게이트웨이의 허용 결정 후에만 진행됩니다.</p>
+
+      <h2>4. 보관 및 삭제</h2>
+      <p>확장 프로그램은 인증 상태·동의 상태·정책 메타데이터를 브라우저의 <code>chrome.storage.local</code>에 저장합니다. 프롬프트·첨부파일·응답 원문과 진단 캡처의 보관 기간은 조직 게이트웨이와 LogVault의 관리자 설정을 따릅니다. 사용자는 로그아웃할 수 있고, 로컬 데이터는 브라우저의 확장 프로그램 데이터 삭제 또는 확장 프로그램 제거로 삭제할 수 있습니다.</p>
+
+      <h2>5. 선택권</h2>
+      <p>최초 로그인 전에 데이터 처리 안내를 확인하고 동의해야 보호 기능과 게이트웨이 로그인을 사용할 수 있습니다. 이메일 저장은 선택 사항이며, 장애 상세 수집은 기본적으로 꺼져 있고 설정 화면에서 사용자가 켜거나 끌 수 있습니다. 동의를 철회하거나 보관 이력을 삭제하려면 조직 보안 관리자에게 요청해 주세요.</p>
+
+      <h2>6. 문의</h2>
+      <p>개인정보 처리에 관한 문의는 조직 보안 관리자 또는 Chrome Web Store 게시자 개발자 연락처로 요청해 주세요.</p>
+      <footer><a href="https://www.xcurenet.com/" target="_blank" rel="noopener noreferrer">(주)엑스큐어넷</a><span class="copyright">COPYRIGHTⓒ 2024 XCURENET. ALL RIGHTS RESERVED.</span><span>본 문서는 X-GEN AI 확장 프로그램의 데이터 처리 방식을 설명하기 위한 문서입니다.</span></footer>
+    </main>
+  </body>
+</html>
